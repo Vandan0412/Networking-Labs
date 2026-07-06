@@ -12,9 +12,7 @@ This repository showcases practical networking experience and serves as a techni
 
 | Lab | Topic | Skills Demonstrated |
 | :--- | :---- | :------------------ |
-| **Lab 01** | Network Fundamentals & Cabling | Ethernet cabling, Cisco IOS CLI, DHCP configuration, IPv4 addressing, ICMP testing, connectivity verification |
-| **Lab 02** *(Coming Soon)* | Client–Server Communication & Packet Analysis | HTTP communication, web server configuration, packet capture, protocol analysis |
-| **Lab 03** *(Coming Soon)* | Router Configuration & Inter-Subnet Routing | Router configuration, subnetting, static routing, inter-network communication |
+| **[Lab 01](01-LAN-Setup-Router-DHCP/)** | LAN Setup, Router Configuration & DHCP | Ethernet cabling, Cisco IOS CLI, DHCP configuration, IPv4 addressing, ICMP testing, connectivity verification |
 
 ---
 
@@ -22,7 +20,7 @@ This repository showcases practical networking experience and serves as a techni
 
 - Cisco Packet Tracer
 - Cisco IOS
-- Windows Networking Utilities (`ipconfig`, `ping`, `tracert`)
+- Windows Networking Utilities (`ipconfig`, `ping`)
 - Ethernet Networking
 - IPv4
 - TCP/IP Protocol Suite
@@ -34,7 +32,7 @@ This repository showcases practical networking experience and serves as a techni
 Each lab follows a consistent structure:
 
 ```text
-Lab-XX/
+XX-Topic/
 ├── README.md          # Lab documentation
 ├── *.pkt              # Cisco Packet Tracer topology
 └── images/            # Annotated screenshots
@@ -60,10 +58,8 @@ Every lab includes:
 - Cisco IOS command-line interface
 - Switch configuration
 - Router configuration
-- Client-server networking
 - ICMP diagnostics
 - Connectivity testing
-- Packet analysis
 - Network troubleshooting
 - Traffic verification
 
@@ -81,4 +77,4 @@ New labs will be added throughout the program as additional networking concepts 
 
 **Vandan Shah**  
 Computer Engineering Technology – Computing Science  
-Algonquin College
+Algonquin College  
