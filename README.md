@@ -14,6 +14,7 @@ This repository showcases practical networking experience and serves as a techni
 | :--- | :---- | :------------------ |
 | **[Lab 01](01-LAN-Setup-Router-DHCP/)** | LAN Setup, Router Configuration & DHCP | Ethernet cabling, Cisco IOS CLI, DHCP configuration, IPv4 addressing, ICMP testing, connectivity verification |
 | **[Lab 02](02-Client-Server-HTTP/)** | Client–Server Communication & HTTP Packet Analysis | Client–server networking, HTTP, TCP/IP, web server configuration, packet capture, protocol layer analysis |
+| **[Lab 03](03-Router-Inter-Subnet-Routing/)** | Router Configuration & Inter-Subnet Routing | Router configuration, inter-subnet routing, Cisco IOS CLI, IPv4 subnetting, routing table analysis, gateway/ARP behaviour |
 
 ---
 
