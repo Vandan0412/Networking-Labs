@@ -13,6 +13,7 @@ This repository showcases practical networking experience and serves as a techni
 | Lab | Topic | Skills Demonstrated |
 | :--- | :---- | :------------------ |
 | **[Lab 01](01-LAN-Setup-Router-DHCP/)** | LAN Setup, Router Configuration & DHCP | Ethernet cabling, Cisco IOS CLI, DHCP configuration, IPv4 addressing, ICMP testing, connectivity verification |
+| **[Lab 02](02-Client-Server-HTTP/)** | Client–Server Communication & HTTP Packet Analysis | Client–server networking, HTTP, TCP/IP, web server configuration, packet capture, protocol layer analysis |
 
 ---
 
@@ -44,6 +45,7 @@ Every lab includes:
 - Network topology
 - Device configuration
 - Verification and testing
+- Protocol and traffic analysis
 - Key networking concepts
 - Screenshots
 - Skills demonstrated
@@ -58,6 +60,10 @@ Every lab includes:
 - Cisco IOS command-line interface
 - Switch configuration
 - Router configuration
+- Client–server networking
+- HTTP and web server configuration
+- TCP/IP protocol analysis
+- Packet capture and inspection
 - ICMP diagnostics
 - Connectivity testing
 - Network troubleshooting
@@ -77,4 +83,4 @@ New labs will be added throughout the program as additional networking concepts 
 
 **Vandan Shah**  
 Computer Engineering Technology – Computing Science  
-Algonquin College  
+Algonquin College
