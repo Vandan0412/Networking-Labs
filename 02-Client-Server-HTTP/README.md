@@ -13,7 +13,7 @@ Configure a web server and client on a switched LAN, serve a web page over HTTP,
 ## Topology
 
 <p align="center">
-  <img src="images/01-topology-diagram.png" alt="Topology">
+  <img src="images/01-topology-diagram.png" alt="Topology" width="600">
 </p>
 
 A client PC and a web server connect through a 2960 switch on the 192.168.1.0/24 network. Both hosts use static IPv4 addressing, and all links use copper straight-through cable since PC–switch and switch–server are connections between unlike devices.
@@ -25,13 +25,13 @@ Static IPv4 addresses were assigned to both hosts on the same subnet.
 **Web Server** → 192.168.1.128 / 255.255.255.0
 
 <p align="center">
-  <img src="images/02-server-ip-config.png" alt="Server IP configuration">
+  <img src="images/02-server-ip-config.png" alt="Server IP configuration" width="600">
 </p>
 
 **Client** → 192.168.1.129 / 255.255.255.0
 
 <p align="center">
-  <img src="images/03-client-ip-config.png" alt="Client IP configuration">
+  <img src="images/03-client-ip-config.png" alt="Client IP configuration" width="600">
 </p>
 
 ## Client–server communication
@@ -39,7 +39,7 @@ Static IPv4 addresses were assigned to both hosts on the same subnet.
 The server's HTTP service hosts a web page. From the client's web browser, requesting `http://192.168.1.128` successfully loads the page served over HTTP, confirming end-to-end client–server communication.
 
 <p align="center">
-  <img src="images/04-client-browser-page.png" alt="Client browser showing the served page">
+  <img src="images/04-client-browser-page.png" alt="Client browser showing the served page" width="600">
 </p>
 
 > **Physical vs. recreation:** On the physical equipment, the page was served by a PHP script (`index.php`) that dynamically displayed the client and server IP addresses. Packet Tracer's HTTP service serves static HTML only and cannot execute PHP, so this recreation uses a static page. The dynamic address behaviour was demonstrated on the physical server.
@@ -49,7 +49,7 @@ The server's HTTP service hosts a web page. From the client's web browser, reque
 Using Packet Tracer's Simulation mode, the capture shows the TCP connection being established first (the three-way handshake), followed by the HTTP request. This confirms that HTTP operates over TCP — the transport connection must be in place before any application data is exchanged.
 
 <p align="center">
-  <img src="images/05-simulation-tcp-http.png" alt="Simulation panel showing TCP handshake then HTTP">
+  <img src="images/05-simulation-tcp-http.png" alt="Simulation panel showing TCP handshake then HTTP" width="600">
 </p>
 
 ## Protocol layer analysis
@@ -64,7 +64,7 @@ Inspecting the HTTP packet's PDU shows the full protocol stack:
 - **Layer 2 – Ethernet II**, with source and destination MAC addresses
 
 <p align="center">
-  <img src="images/06-pdu-layer-analysis.png" alt="PDU OSI model layer analysis">
+  <img src="images/06-pdu-layer-analysis.png" alt="PDU OSI model layer analysis" width="600">
 </p>
 
 ## Files

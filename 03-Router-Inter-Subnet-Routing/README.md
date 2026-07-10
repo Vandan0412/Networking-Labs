@@ -13,7 +13,7 @@ Configure a Cisco router to connect two separate subnets, assign a gateway inter
 ## Topology
 
 <p align="center">
-  <img src="images/01-topology-diagram.png" alt="Inter-subnet routing topology">
+  <img src="images/01-topology-diagram.png" alt="Inter-subnet routing topology" width="600">
 </p>
 
 Two subnets are connected through a single 1941 router:
@@ -28,13 +28,13 @@ Each router interface serves as the default gateway for its subnet. All links us
 Each interface was assigned an IP address on its respective subnet and enabled. Because both subnets are directly connected to the router, no additional routing protocol is required — the router routes between them automatically.
 
 <p align="center">
-  <img src="images/02-router-cli-config.png" alt="Router interface configuration in IOS CLI">
+  <img src="images/02-router-cli-config.png" alt="Router interface configuration in IOS CLI" width="600">
 </p>
 
 Both interfaces confirmed up with `show ip interface brief`:
 
 <p align="center">
-  <img src="images/03-show-ip-interface-brief.png" alt="show ip interface brief output">
+  <img src="images/03-show-ip-interface-brief.png" alt="show ip interface brief output" width="600">
 </p>
 
 `GigabitEthernet0/0` (192.168.10.1) and `GigabitEthernet0/1` (192.168.20.1) both show status **up / up**.
@@ -44,7 +44,7 @@ Both interfaces confirmed up with `show ip interface brief`:
 The router's routing table shows both subnets as directly connected (`C`), confirming the router knows how to reach each network:
 
 <p align="center">
-  <img src="images/04-show-ip-route.png" alt="Router routing table showing two connected networks">
+  <img src="images/04-show-ip-route.png" alt="Router routing table showing two connected networks" width="600">
 </p>
 
 ## Host addressing
@@ -54,13 +54,13 @@ Each host is configured on its own subnet, pointing to that subnet's router inte
 **PC0** → 192.168.10.10 / 255.255.255.0, gateway 192.168.10.1
 
 <p align="center">
-  <img src="images/05-pc-a-ip-config.png" alt="PC0 IP configuration">
+  <img src="images/05-pc-a-ip-config.png" alt="PC0 IP configuration" width="600">
 </p>
 
 **PC1** → 192.168.20.10 / 255.255.255.0, gateway 192.168.20.1
 
 <p align="center">
-  <img src="images/06-pc-b-ip-config.png" alt="PC1 IP configuration">
+  <img src="images/06-pc-b-ip-config.png" alt="PC1 IP configuration" width="600">
 </p>
 
 ## Connectivity verification
@@ -68,7 +68,7 @@ Each host is configured on its own subnet, pointing to that subnet's router inte
 Pinging PC1 (192.168.20.10) from PC0 (192.168.10.10) succeeds with 0% packet loss, confirming successful communication between the two subnets. The replies show **TTL 127** — decremented from 128 by the router, which itself confirms the traffic was routed across one hop.
 
 <p align="center">
-  <img src="images/07-cross-subnet-ping.png" alt="Successful cross-subnet ping from PC0 to PC1">
+  <img src="images/07-cross-subnet-ping.png" alt="Successful cross-subnet ping from PC0 to PC1" width="600">
 </p>
 
 ## Protocol layer analysis
@@ -76,7 +76,7 @@ Pinging PC1 (192.168.20.10) from PC0 (192.168.10.10) succeeds with 0% packet los
 Inspecting the ICMP packet as it leaves PC0 reveals how addressing works across a subnet boundary:
 
 <p align="center">
-  <img src="images/08-pdu-gateway-mac.png" alt="PDU showing Layer 3 destination host with Layer 2 destination gateway MAC">
+  <img src="images/08-pdu-gateway-mac.png" alt="PDU showing Layer 3 destination host with Layer 2 destination gateway MAC" width="600">
 </p>
 
 - **Layer 3 (IP)** — destination `192.168.20.10`: the **final host** on the remote subnet.
