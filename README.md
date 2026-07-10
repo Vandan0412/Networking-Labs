@@ -81,7 +81,7 @@ New labs will be added throughout the program as additional networking concepts 
 
 ---
 
-## About
+## Author
 
 **Vandan Shah**  
 Computer Engineering Technology – Computing Science  
